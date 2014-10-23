@@ -173,7 +173,7 @@ NSString *const AWSS3PresignedURLErrorDomain = @"com.amazonaws.AWSS3PresignedURL
     //generate baseURL String (use virtualHostStyle if possible)
     NSString *keyPath = nil;
     if (bucketName == nil || [self aws_isVirtualHostedStyleCompliant:bucketName]) {
-        keyPath = (keyName == nil ? @"" : keyName]);
+        keyPath = (keyName == nil ? @"" : keyName);
     } else {
         keyPath = (keyName == nil ? [NSString stringWithFormat:@"%@", bucketName] : [NSString stringWithFormat:@"%@/%@", bucketName, keyName]);
     }
